@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%- include("../partials/head") %>
+
+    <body>
+        <%- include("../partials/navbar") %>
+
+        <article class="movie-details">
+            <h1><%= movie.title %></h1>
+            <img src="<%= movie.image %>" alt="Poster of <%= movie.title %>">
+
+            <section>
+                <p><strong>Release date:</strong> <%= movie.releaseDate %></p>
+                <p><strong>Length:</strong> <%= movie.length %></p>
+            </section>
+
+            <a href="/movies/<%= movie._id %>/edit" class="btn-edit">Edit</a>
+            
+            <form action="/movies/<%= movie._id %>?_method=DELETE" method="post">
+                <button type="submit">Delete</button>
+            </form>
+
+            <section class="reviews">
+                <h2>Reviews</h2>
+                <hr>
+                <% movie.reviews.forEach(review =>  {%>
+                    <article class="review">
+                        <p><strong>Rating:</strong> <%= review.rating %>/5</p>
+                        <p><%= review.comment %></p>
+                        <p>Posted by <%= review.user %></p>
+                    </article>
+                <% }); %>
+                    <hr>
+            </section>
+
+        </article>
+
+        <aside>
+            <%- include("../partials/reviewForm", {resource: movie}); %>
+        </aside>
+    </body>
+</html>

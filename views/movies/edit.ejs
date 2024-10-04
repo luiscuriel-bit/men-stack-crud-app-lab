@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("../partials/head") %>
+
+    <body>
+        <%- include("../partials/navbar") %>
+
+        <h1>Edit a movie</h1>
+        
+        <%- include("../partials/movieForm", {action: `/movies/${movie._id}?_method=put`, movie, buttonText: "Update movie"}); %>
+    </body>
+
+</html>

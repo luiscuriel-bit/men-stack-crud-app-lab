@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+}
+
+.navbar ul li a:hover {
+    color: #F0A500;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: color 0.3s ease;
+}
+
+.btn-edit {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.btn-edit:hover {
+    background-color: #0056B3;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.home{
+    padding: 50px 20px;
+    background-color: #F9F9F9;
+    color: #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+    font-size: 3rem;
+    height: 100vh;
+}
+
+form {
+    background-color: #F9F9F9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form input,
+form select,
+form area {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button:hover {
+    color: #0056B3
+}
+
+.reviews {
+    background-color: #F1F1F1;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.reviews h3 {
+    font-size: 18px;
+    color: #444;
+}
+
+.reviews p {
+    font-size: 14px;
+    color: #666;
+}
+
+.review-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.book-details,
+.movie-details {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.book-details img,
+.movie-details img {
+    border-radius: 10px;
+}
+
+.book-details h2,
+.movie-details h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.book-details p,
+.movie-details p {
+    font-size: 1rem;
+    color: #555;
+}

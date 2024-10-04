@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("../partials/head") %>
+
+    <body>
+        <%- include("../partials/navbar") %>
+        
+        <article class="book-details">
+            <h1><%= book.title %></h1>
+            <img src="<%= book.image %>" alt="Book cover of <%= book.title %>">
+
+            <section>
+                <p><strong>Author:</strong> <%= book.author %></p>
+                <p><strong>Genre:</strong> <%= book.genre.join(", ") %></p>
+            </section>
+            
+            <a href="/books/<%= book._id %>/edit" class="btn-edit">Edit</a>
+
+            <form action="/books/<%= book._id %>?_method=DELETE" method="post">
+                <button type="submit">Delete</button>
+            </form>
+
+            <section class="reviews">
+                <h2>Reviews</h2>
+                <hr>
+                <% book.reviews.forEach(review => { %>
+                    <article class="review">
+                        <p><strong>Rating:</strong> <%= review.rating %>/5</p>
+                        <p><%= review.comment %></p>
+                        <p>Posted by <%= review.user %></p>
+                    </article>
+                    <hr>
+                <% }); %>
+            </section>
+        </article>
+        
+
+        <aside>
+            <%- include("../partials/reviewForm", {resource: book}); %>
+        </aside>
+    </body>
+</html>

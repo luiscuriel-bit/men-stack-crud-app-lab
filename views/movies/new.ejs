@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("../partials/head") %>
+
+    <body>
+        <%- include("../partials/navbar") %>
+
+        <h1>Add a new movie</h1>
+
+        <%- include("../partials/movieForm", {movie: null, action: "/movies" , buttonText: "Add movie" }); %>
+    </body>
+
+</html>

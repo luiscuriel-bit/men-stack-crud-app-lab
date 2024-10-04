@@ -1,0 +1,13 @@
+
+<form action="<%= `/${resource.constructor.modelName}s/${resource._id}/reviews` %>" method="post">
+    <label for="user">User</label>
+    <input type="text" id="user" name="user">
+
+    <label for="rating">Rating</label>
+    <input type="text" id="rating" name="rating">
+
+    <label for="comment">Comment</label>
+    <input type="text" id="comment" name="comment">
+
+    <button type="submit">Add review</button>
+</form>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("../partials/head") %>
+
+    <body>
+        <%- include("../partials/navbar") %>
+        
+        <main class="gallery">
+            <% movies.forEach(movie=> { %>
+                <a href="/movies/<%= movie._id %>">
+                    <article class="card">
+                        <img src="<%= movie.image %>" alt="Poster of <%= movie.title %>">
+                        <h3><%= movie.title %></h3>
+                        <p>Length: <%= movie.length %> </p>
+                        <p>
+                            <% const rating = Math.round(movie.reviews.reduce( (acc, review) => acc + review.rating, 0) / movie.reviews.length); %>
+                            <% for (let i = 1; i <= rating; i++) { %>
+                                &#9733;
+                            <% } %>
+                        </p>
+                    </article>
+                </a>
+            <% }); %>
+        </main>
+    </body>
+
+</html>

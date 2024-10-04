@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head") %>
+
+<body>
+    <%- include("../partials/navbar") %>
+
+    <h1>Edit a book</h1>
+    
+    <%- include("../partials/bookForm", {action: `/books/${book._id}?_method=put`, book, buttonText: "Update book"}); %>
+</body>
+
+</html>
